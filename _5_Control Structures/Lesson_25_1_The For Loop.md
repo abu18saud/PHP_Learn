@@ -29,4 +29,15 @@ increment section of a for loop is not only used to increment the counter. it is
 ?>
 
 ------------------------------------------
+## The for loop in the example above first sets the variable $a to 0, then checks for the condition ($a < 6). If the condition is true, it runs the code. After that, it increments $a ($a++).
 
+------------------------------------------
+
+# Drag and drop from the options below to print the variable "name" 10 times.
+
+$name = "Bruce";
+
+for($i=0; $i<10; $i++){
+   echo $name; 
+}
+------------------------------------------
