@@ -43,3 +43,15 @@ echo "Hi ".$_GET['name'].". ";
 echo "You are ".$_GET['age']." years old.";
 ?>
 
+---------------------------------------------------------
+## Warning:
+1 - GET should NEVER be used for sending passwords or other sensitive information!
+2- When using POST or GET, proper validation of form data through filtering and processing is vitally important to protect your form from hackers and exploits!
+
+---------------------------------------------------------
+
+# Which method was used for the following URL?
+# http://www.sololearn.com/index.php?id=825
+- GET
+
+---------------------------------------------------------
