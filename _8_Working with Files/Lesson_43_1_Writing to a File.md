@@ -44,4 +44,50 @@ $myfile = fopen("file.txt", "w");
 
 ## Write to File
 
+When writing to a file, use the fwrite() function.
+The first parameter of fwrite() is the file to write to; the second parameter is the string to be written.
 
+The example below writes a couple of names into a new file called "names.txt".
+
+
+## Example
+<?php
+$myfile = fopen("names.txt", "w");
+
+$txt = "John\n";
+fwrite($myfile, $txt);
+$txt = "David\n";
+fwrite($myfile, $txt);
+
+fclose($myfile);
+
+/* File contains:
+John
+David
+*/
+?>
+
+- Notice that we wrote to the file "names.txt" twice, and then we used the fclose() function to close the file.
+
+- The \n symbol is used when writing new lines.
+
+---------------------------------------------------------
+
+# What is the symbol for a new line in a text file?
+- \n
+
+---------------------------------------------------------
+
+## fclose()
+
+- The fclose() function closes an open file and returns TRUE on success or FALSE on failure.
+- It's a good practice to close all files after you have finished working with them.
+---------------------------------------------------------
+# Rearrange the code to write 12 to the file 'num.txt'.
+
+$handle = fopen('num.txt', 'w');
+fwrite($handle, '1');
+fwrite($handle, '2');
+fclose($handle);
+
+---------------------------------------------------------
