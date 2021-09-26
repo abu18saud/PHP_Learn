@@ -91,6 +91,75 @@ $p1->speak();
 ?>
 
 ---------------------------------------------------------
+## The process of creating an object of a class is called instantiation.
+To instantiate an object of a class, use the keyword new, as in the example below:
 
+- $bob = new Person();
 
+In the code above, $bob is an object of the Person class.
 
+To access the properties and methods of an object, use the arrow (->) construct, as in:
+
+- echo $bob->age;
+
+This statement outputs the value of the age property for $bob. If you want to assign a value to a property use the assignment operator = as you would with any variable.
+
+Let's define the Person class, instantiate an object, make an assignment, and call the speak() method:
+
+## Example
+<?php
+class Person {
+    public $age;
+    function speak() {
+        echo "Hi!";
+    }
+}
+$p1 = new Person(); 
+$p1->age = 23;
+echo $p1->age; 
+$p1->speak();
+?>
+
+---------------------------------------------------------
+# Create a "dog" object which is an instance of the "Animal" class.
+- $dog = new Animal();
+---------------------------------------------------------
+## $this
+$this is a pseudo-variable that is a reference to the calling object. When working within a method, use $this in the same way you would use an object name outside the class.
+
+## For example:
+
+<?php
+class Dog {
+    public $legs=4;
+    public function display() {
+        echo $this->legs;
+    }
+}
+$d1 = new Dog();
+$d1->display();
+
+echo '<br />';
+
+$d2 = new Dog();
+$d2->legs = 2;
+$d2->display();
+?>
+
+- We created two objects of the Dog class and called their display() methods. Because the display() method uses $this, the legs value referred to the appropriate calling object’s property value.
+
+- As you can see, each object can have its own values for the properties of the class.
+
+---------------------------------------------------------
+# Fill in the blanks to declare a class Student and a method that prints its name and age properties.
+
+class Student {
+  public $name;
+  public $age;
+  public function printData() {    
+    echo $this->name;
+    echo $this->age;
+  }
+}
+
+---------------------------------------------------------
